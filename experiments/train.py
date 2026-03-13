@@ -62,7 +62,7 @@ def get_data_loaders(cfg: Config):
 
     full_dataset = datasets.ImageFolder(cfg.data_dir, transform=train_transforms)
     
-    # Разделение на train/val (80/20)
+    # Разделение на train/val
     total_count = len(full_dataset)
     val_count = int(total_count * 0.4)
     train_count = total_count - val_count
@@ -72,7 +72,7 @@ def get_data_loaders(cfg: Config):
     
     # Применяем валидационные трансформации к val выборке
     val_dataset.dataset.transform = val_transforms
-
+    # Создание батчей
     train_loader = DataLoader(train_dataset, batch_size=cfg.batch_size, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=cfg.batch_size, shuffle=False)
     
