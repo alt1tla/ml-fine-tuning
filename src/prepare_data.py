@@ -2,8 +2,8 @@ from pathlib import Path
 from PIL import Image
 
 # пути
-RAW_DIR = Path("data/raw")
-PROCESSED_DIR = Path("data/processed")
+RAW_DIR = Path("../data/raw")
+PROCESSED_DIR = Path("../data/processed")
 
 # параметры
 IMAGE_SIZE = (224, 224)

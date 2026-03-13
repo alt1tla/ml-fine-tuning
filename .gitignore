@@ -1,2 +1,8 @@
 /data/raw
 /data/processed
+/venv
+/experiments/__pycache__
+/app/*.json
+/app/*.onnx
+/app/*.data
+/app/*.pth
