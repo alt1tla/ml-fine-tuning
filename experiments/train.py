@@ -64,7 +64,7 @@ def get_data_loaders(cfg: Config):
     
     # Разделение на train/val
     total_count = len(full_dataset)
-    val_count = int(total_count * 0.4)
+    val_count = int(total_count * 0.2)
     train_count = total_count - val_count
     
     train_dataset, val_dataset = random_split(full_dataset, [train_count, val_count], 
